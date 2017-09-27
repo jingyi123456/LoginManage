@@ -1,6 +1,8 @@
 package com.yunsu.domain;
 
-public class Register {
+import java.io.Serializable;
+
+public class Register implements Serializable{
     private String uname;
     private String upassword;
     private String address;
@@ -36,5 +38,15 @@ public class Register {
 
     public void setQq(String qq) {
         this.qq = qq;
+    }
+
+    @Override
+    public String toString() {
+        return "Register{" +
+                "uname='" + uname + '\'' +
+                ", upassword='" + upassword + '\'' +
+                ", address='" + address + '\'' +
+                ", qq='" + qq + '\'' +
+                '}';
     }
 }
